@@ -8,7 +8,7 @@ This repository provides an in-depth look into the transformative role of Artifi
 
 - **Introduction**: 5 minutes
 - **AI in Software Development**: 7 minutes
-- **CoPilot Deep Dive**: 25 minutes
+- **CoPilot Deep Dive**: (25 minutes overall)
   - **Productivity**: 8 minutes
   - **Debugging**: 8 minutes
   - **Prototyping with MUI**: 9 minutes
