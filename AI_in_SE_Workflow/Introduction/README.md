@@ -1,1 +1,0 @@
-An introductory file explaining the purpose and overview of the repository.
