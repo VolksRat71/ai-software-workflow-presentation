@@ -2,19 +2,18 @@
 
 ## Purpose
 
-This repository provides an in-depth look into the transformative role of Artificial Intelligence, with a specific focus on tools like CoPilot, in enhancing the workflow of software engineers. Through structured sections, it covers productivity enhancements, debugging prowess, and rapid prototyping capabilities brought about by AI.
+This repository provides an in-depth look into the transformative role of Artificial Intelligence, with a specific focus on tools like CoPilot, in enhancing the workflow of software engineers. Through structured sections, it covers productivity enhancements and debugging prowess brought about by AI.
 
 ## Time Guide
 
-- **Introduction**: 5 minutes
-- **AI in Software Development**: 7 minutes
-- **CoPilot Deep Dive**: (25 minutes overall)
-  - **Productivity**: 8 minutes
-  - **Debugging**: 8 minutes
-  - **Prototyping with MUI**: 9 minutes
-- **GPT-4 vs. CoPilot Debugging**: 7 minutes
-- **Interactive Session**: 10 minutes
-- **Conclusion and Future Implications**: 5 minutes
+- **Introduction**: 7 minutes
+- **AI in Software Development**: 10 minutes
+- **CoPilot Deep Dive**: 22 minutes
+  - **Productivity**: 11 minutes
+  - **Debugging**: 11 minutes
+- **GPT-4 vs. CoPilot Debugging**: 9 minutes
+- **Interactive Session**: 12 minutes
+- **Conclusion and Future Implications**: 7 minutes
 - **Q&A**: Variable, based on audience engagement (anticipate ~3 minutes)
 
 Total Duration: Approximately 1 hour
@@ -26,7 +25,6 @@ Total Duration: Approximately 1 hour
 3. [CoPilot Deep Dive](./CoPilot_Deep_Dive)
     - [Productivity](./CoPilot_Deep_Dive/Productivity)
     - [Debugging](./CoPilot_Deep_Dive/Debugging)
-    - [Prototyping with MUI](./CoPilot_Deep_Dive/Prototyping_with_MUI)
 4. [GPT-4 vs. CoPilot Debugging](./GPT-4_vs_CoPilot_Debugging/debugging_comparison.md)
 5. [Interactive Session](./Interactive_Session)
 6. [Conclusion and Future Implications](./Conclusion_and_Future_Implications/conclusion.md)
