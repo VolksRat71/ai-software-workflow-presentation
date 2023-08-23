@@ -6,15 +6,14 @@ This repository provides an in-depth look into the transformative role of Artifi
 
 ## Time Guide
 
-- **Introduction**: 7 minutes
-- **AI in Software Development**: 10 minutes
-- **CoPilot Deep Dive**: 22 minutes
-  - **Productivity**: 11 minutes
-  - **Debugging**: 11 minutes
-- **GPT-4 vs. CoPilot Debugging**: 9 minutes
-- **Interactive Session**: 12 minutes
-- **Conclusion and Future Implications**: 7 minutes
-- **Q&A**: Variable, based on audience engagement (anticipate ~3 minutes)
+- **Introduction**: 10 minutes
+- **AI in Software Development**: 12 minutes
+- **CoPilot Deep Dive**: 25 minutes
+  - **Productivity**: 13 minutes
+  - **Debugging**: 12 minutes
+- **GPT-4 vs. CoPilot Debugging**: 10 minutes
+- **Conclusion and Future Implications**: 8 minutes
+- **Q&A**: Variable, based on audience engagement (anticipate ~5 minutes)
 
 Total Duration: Approximately 1 hour
 
@@ -26,7 +25,6 @@ Total Duration: Approximately 1 hour
     - [Productivity](./CoPilot_Deep_Dive/Productivity)
     - [Debugging](./CoPilot_Deep_Dive/Debugging)
 4. [GPT-4 vs. CoPilot Debugging](./GPT-4_vs_CoPilot_Debugging/debugging_comparison.md)
-5. [Interactive Session](./Interactive_Session)
-6. [Conclusion and Future Implications](./Conclusion_and_Future_Implications/conclusion.md)
-7. [Q&A](./Q&A/questions.md)
-8. [Resources and References](./Resources_and_References/resources.md)
+5. [Conclusion and Future Implications](./Conclusion_and_Future_Implications/conclusion.md)
+6. [Q&A](./Q&A/questions.md)
+7. [Resources and References](./Resources_and_References/resources.md)

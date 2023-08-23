@@ -1,1 +1,0 @@
-List of sample tasks for interactive sessions with CoPilot.
