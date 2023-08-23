@@ -21,6 +21,7 @@ class ExampleClassComponent extends React.Component {
         // Bind event handlers to the component instance
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleItemSelect = this.handleItemSelect.bind(this);
+        this.navigateToDetails = this.navigateToDetails.bind(this);
     }
 
     /**
@@ -30,14 +31,19 @@ class ExampleClassComponent extends React.Component {
         setTimeout(() => {
             this.setState({
                 items: [
-                    { id: 1, name: 'Item 1' },
-                    { id: 2, name: 'Item 2' },
-                    { id: 3, name: 'Item 3' },
+                    { id: 1, name: 'Item 1', image: '/images/item1.jpg' },
+                    { id: 2, name: 'Item 2', image: '/images/item2.jpg' },
+                    { id: 3, name: 'Item 3', image: '/images/item3.jpg' },
                     // ... more items
                 ],
                 isLoading: false,
             });
         }, 1000);
+    }
+
+    navigateToDetails() {
+        // Placeholder for navigating to a detailed view
+        alert("Navigating to item details page!");
     }
 
     /**
@@ -95,6 +101,7 @@ class ExampleClassComponent extends React.Component {
                 <ul>
                     {filteredItems.map(item => (
                         <li key={item.id} onClick={() => this.handleItemSelect(item)}>
+                            <img src={item.image} alt={item.name} width="50" height="50" />
                             {item.name}
                         </li>
                     ))}
@@ -103,6 +110,7 @@ class ExampleClassComponent extends React.Component {
                     <div>
                         <h2>Selected Item</h2>
                         <p>{this.state.selectedItem.name}</p>
+                        <button onClick={this.navigateToDetails}>View Details</button>
                     </div>
                 )}
             </div>

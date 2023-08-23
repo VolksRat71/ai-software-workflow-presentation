@@ -12,6 +12,7 @@ class ExampleClassComponent extends React.Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleItemSelect = this.handleItemSelect.bind(this);
+    this.navigateToDetails = this.navigateToDetails.bind(this);
   }
 
   componentDidMount() {
@@ -19,9 +20,9 @@ class ExampleClassComponent extends React.Component {
     setTimeout(() => {
       this.setState({
         items: [
-          { id: 1, name: 'Item 1' },
-          { id: 2, name: 'Item 2' },
-          { id: 3, name: 'Item 3' },
+          { id: 1, name: 'Item 1', image: '/images/item1.jpg' },
+          { id: 2, name: 'Item 2', image: '/images/item2.jpg' },
+          { id: 3, name: 'Item 3', image: '/images/item3.jpg' },
           // ... more items
         ],
         isLoading: false,
@@ -47,6 +48,11 @@ class ExampleClassComponent extends React.Component {
     });
   }
 
+  navigateToDetails() {
+    // For now, this will be a placeholder. When integrating with Next.js, this will navigate using 'Link'
+    alert("Navigating to item details page!");
+  }
+
   render() {
     if (this.state.isLoading) {
       return <div>Loading...</div>;
@@ -67,6 +73,7 @@ class ExampleClassComponent extends React.Component {
         <ul>
           {filteredItems.map(item => (
             <li key={item.id} onClick={() => this.handleItemSelect(item)}>
+              <img src={item.image} alt={item.name} width="50" height="50" />
               {item.name}
             </li>
           ))}
@@ -75,6 +82,7 @@ class ExampleClassComponent extends React.Component {
           <div>
             <h2>Selected Item</h2>
             <p>{this.state.selectedItem.name}</p>
+            <button onClick={this.navigateToDetails}>View Details</button>
           </div>
         )}
       </div>
