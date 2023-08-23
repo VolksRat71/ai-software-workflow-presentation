@@ -1,0 +1,1 @@
+Examples of verbose functions and CoPilot's refactored versions.

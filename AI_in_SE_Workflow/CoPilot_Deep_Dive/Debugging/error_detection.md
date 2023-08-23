@@ -1,0 +1,1 @@
+Code snippets with common errors and CoPilot's detection and solution suggestions.

@@ -1,0 +1,1 @@
+Demonstration of CoPilot recognizing common MUI patterns and suggesting relevant components.
