@@ -1,1 +1,0 @@
-Demonstrations of CoPilot generating boilerplate MUI components.

@@ -1,1 +1,0 @@
-Examples of CoPilot's theme-based styling suggestions for MUI.
