@@ -1,53 +1,61 @@
 const fs = require('fs');
+const path = require('path');
 
-function createWorkspace() {
-  const workspaceName = 'AI_in_SE_Workflow';
-  const directories = [
-    'Introduction',
-    'AI_in_Software_Development',
-    'CoPilot_Deep_Dive/Productivity',
-    'CoPilot_Deep_Dive/Debugging',
-    'CoPilot_Deep_Dive/Prototyping_with_MUI',
-    'GPT-4_vs_CoPilot_Debugging',
-    'Interactive_Session',
-    'Conclusion_and_Future_Implications',
-    'Q&A',
-    'Resources_and_References'
-  ];
-  const files = [
-    { path: 'Introduction/README.md', content: 'An introductory file explaining the purpose and overview of the repository.' },
-    { path: 'AI_in_Software_Development/AI_Benefits.md', content: 'A detailed overview of the role of AI in software development.' },
-    { path: 'CoPilot_Deep_Dive/Productivity/code_completion.md', content: 'Demonstrations of CoPilot\'s real-time code suggestion capabilities.' },
-    { path: 'CoPilot_Deep_Dive/Productivity/documentation.md', content: 'Examples of CoPilot\'s ability to generate comments and docstrings.' },
-    { path: 'CoPilot_Deep_Dive/Productivity/code_patterns.md', content: 'Showcase of CoPilot recognizing and suggesting common coding patterns.' },
-    { path: 'CoPilot_Deep_Dive/Debugging/error_detection.md', content: 'Code snippets with common errors and CoPilot\'s detection and solution suggestions.' },
-    { path: 'CoPilot_Deep_Dive/Debugging/code_refactoring.md', content: 'Examples of verbose functions and CoPilot\'s refactored versions.' },
-    { path: 'CoPilot_Deep_Dive/Debugging/error_messages.md', content: 'Demonstration of how CoPilot interprets and suggests fixes for error messages.' },
-    { path: 'CoPilot_Deep_Dive/Prototyping_with_MUI/component_generation.md', content: 'Demonstrations of CoPilot generating boilerplate MUI components.' },
-    { path: 'CoPilot_Deep_Dive/Prototyping_with_MUI/styling_with_mui.md', content: 'Examples of CoPilot\'s theme-based styling suggestions for MUI.' },
-    { path: 'CoPilot_Deep_Dive/Prototyping_with_MUI/mui_patterns.md', content: 'Demonstration of CoPilot recognizing common MUI patterns and suggesting relevant components.' },
-    { path: 'GPT-4_vs_CoPilot_Debugging/debugging_comparison.md', content: 'A detailed comparison of debugging capabilities between GPT-4 and CoPilot.' },
-    { path: 'Interactive_Session/sample_tasks.md', content: 'List of sample tasks for interactive sessions with CoPilot.' },
-    { path: 'Interactive_Session/live_feedback.md', content: 'Placeholder for noting down feedback during the presentation.' },
-    { path: 'Conclusion_and_Future_Implications/conclusion.md', content: 'Summary of the benefits and future implications of AI in software engineering.' },
-    { path: 'Q&A/questions.md', content: 'Frequently asked questions and their answers post-presentation.' },
-    { path: 'Resources_and_References/resources.md', content: 'Additional useful links and references related to the topic.' }
-  ];
+const baseDir = './CoPilot_Deep_Dive/Productivity';
 
-  // Create the workspace directory
-  fs.mkdirSync(workspaceName);
+const steps = [
+  {
+    dir: '1_Explaining_Class_Component',
+    mdFile: 'class_component_explanation.md',
+    jsFile: 'example_class_component.js',
+    mdContent: '# Explaining a Complex React Class Component\n\nTODO: Document the content.',
+    jsContent: '// Example of a complex React class component\n\n'
+  },
+  {
+    dir: '2_Functional_Conversion_with_Hooks',
+    mdFile: 'functional_conversion_with_hooks.md',
+    jsFile: 'example_functional_with_hooks.js',
+    mdContent: '# Converting the Component to React Functional with Hooks\n\nTODO: Document the content.',
+    jsContent: '// Example of the same component converted to functional with hooks\n\n'
+  },
+  {
+    dir: '3_Documenting_Component',
+    mdFile: 'documenting_the_component.md',
+    jsFile: 'example_documented_component.js',
+    mdContent: '# Adding Comments to the Component\n\nTODO: Document the content.',
+    jsContent: '// Example of the functional component with added documentation\n\n'
+  },
+  {
+    dir: '4_Integrating_with_NextJS',
+    mdFile: 'integrating_with_nextjs.md',
+    jsFile: 'example_nextjs_component.js',
+    mdContent: '# Converting the Component to Work with Next.js\n\nTODO: Document the content.',
+    jsContent: '// Example of the component adapted for Next.js\n\n'
+  }
+];
 
-  // Create the directories
-  directories.forEach((dir) => {
-    fs.mkdirSync(`${workspaceName}/${dir}`, { recursive: true });
-  });
-
-  // Create the files
-  files.forEach((file) => {
-    fs.writeFileSync(`${workspaceName}/${file.path}`, file.content);
-  });
-
-  console.log(`Workspace '${workspaceName}' created successfully.`);
+// Ensure base directory exists
+if (!fs.existsSync(baseDir)) {
+  console.error(`The directory "${baseDir}" doesn't exist. Please make sure you're in the right location.`);
+  process.exit(1);
 }
 
-createWorkspace();
+// Create directories and files
+steps.forEach(step => {
+  const dirPath = path.join(baseDir, step.dir);
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath);
+  }
+
+  const mdFilePath = path.join(dirPath, step.mdFile);
+  if (!fs.existsSync(mdFilePath)) {
+    fs.writeFileSync(mdFilePath, step.mdContent);
+  }
+
+  const jsFilePath = path.join(dirPath, step.jsFile);
+  if (!fs.existsSync(jsFilePath)) {
+    fs.writeFileSync(jsFilePath, step.jsContent);
+  }
+});
+
+console.log('Directories and files structured successfully.');

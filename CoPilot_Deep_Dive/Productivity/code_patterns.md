@@ -1,1 +1,0 @@
-Showcase of CoPilot recognizing and suggesting common coding patterns.
